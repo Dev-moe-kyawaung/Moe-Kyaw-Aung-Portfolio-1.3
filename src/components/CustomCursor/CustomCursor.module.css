@@ -1,0 +1,48 @@
+.cursorDot, .cursorRing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.cursorDot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-green);
+  margin: -3px 0 0 -3px;
+  transition: opacity 0.2s;
+}
+
+.cursorRing {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--accent-green);
+  margin: -16px 0 0 -16px;
+  transition: width 0.25s var(--ease-smooth), height 0.25s var(--ease-smooth),
+              margin 0.25s var(--ease-smooth), border-color 0.25s ease, background 0.25s ease;
+}
+
+.ringHover {
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0 -26px;
+  background: rgba(0, 255, 156, 0.08);
+  border-color: var(--accent-green);
+}
+
+/* Hide native cursor only where custom cursor is active — applied globally via body class */
+:global(body.custom-cursor-active) {
+  cursor: none;
+}
+:global(body.custom-cursor-active a),
+:global(body.custom-cursor-active button) {
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  .cursorDot, .cursorRing { display: none; }
+}
+
