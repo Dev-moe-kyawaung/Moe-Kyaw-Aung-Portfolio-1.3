@@ -165,3 +165,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     transition-duration: 0.001ms !important;
   }
 }
+/* Added to index.css — extends the prefers-reduced-motion rule from Section 1 */
+
+/* Disable the heaviest visual effects for users who've indicated they want
+   reduced motion, AND as a pragmatic fallback for low-end devices where
+   canvas particle animation and custom cursor tracking could cause jank. */
+@media (prefers-reduced-motion: reduce) {
+  .particleCanvas { display: none; }
+}
+
