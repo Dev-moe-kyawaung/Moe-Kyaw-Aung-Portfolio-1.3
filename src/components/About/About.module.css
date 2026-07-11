@@ -1,0 +1,45 @@
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.aboutText {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+.aboutText strong {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+.ringsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+}
+
+.timelineSection {
+  margin-top: 4rem;
+}
+.timelineTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .aboutGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 500px) {
+  .ringsGrid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; padding: 1.5rem 1rem; }
+}
+
