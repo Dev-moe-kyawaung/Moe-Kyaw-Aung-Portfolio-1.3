@@ -1,0 +1,32 @@
+.layer {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+  z-index: 0;
+}
+
+/* Example decorative glow blobs — drop into section wrappers with `position: relative` */
+.glowBlobGreen {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 255, 156, 0.12), transparent 70%);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  filter: blur(20px);
+}
+
+.glowBlobAmber {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 180, 84, 0.08), transparent 70%);
+  border-radius: 50%;
+  bottom: -80px;
+  left: -80px;
+  filter: blur(20px);
+}
+
+@media (max-width: 700px) {
+  .glowBlobGreen, .glowBlobAmber { width: 220px; height: 220px; }
+}
+
