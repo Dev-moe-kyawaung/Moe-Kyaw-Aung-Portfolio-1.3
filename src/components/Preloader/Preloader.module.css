@@ -1,0 +1,73 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-void);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.terminalBox {
+  width: min(480px, 90vw);
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.terminalHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-soft);
+  background: var(--bg-void);
+}
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.terminalTitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-left: 8px;
+}
+
+.terminalBody {
+  padding: 1.25rem 1.25rem 0.75rem;
+  min-height: 160px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.bootLine {
+  color: var(--accent-green);
+  margin-bottom: 0.5rem;
+  animation: typeIn 0.2s ease-out;
+}
+@keyframes typeIn {
+  from { opacity: 0; transform: translateX(-6px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.progressTrack {
+  height: 4px;
+  background: var(--border-soft);
+  margin: 0 1.25rem;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-green-dim), var(--accent-green));
+  transition: width 0.1s linear;
+}
+
+.progressLabel {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  text-align: right;
+  padding: 0.5rem 1.25rem 1.1rem;
+}
+
