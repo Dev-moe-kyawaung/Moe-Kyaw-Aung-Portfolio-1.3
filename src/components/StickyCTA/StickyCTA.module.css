@@ -1,0 +1,50 @@
+.stickyCta {
+  position: fixed;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--accent-green);
+  border-radius: 999px;
+  box-shadow: var(--shadow-glow), var(--shadow-card);
+  z-index: 950;
+  opacity: 0;
+  transition: all var(--dur-med) var(--ease-smooth);
+  overflow: hidden;
+}
+.stickyCta.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.ctaMain {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.85rem 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+.ctaMain:hover { color: var(--accent-green); }
+.ctaMain svg { color: var(--accent-green); }
+
+.dismissBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1rem;
+  border-left: 1px solid var(--border-soft);
+  color: var(--text-dim);
+  transition: color var(--dur-fast) var(--ease-smooth);
+}
+.dismissBtn:hover { color: var(--accent-red); }
+
+@media (max-width: 600px) {
+  .ctaMain span { max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
+  .stickyCta { bottom: 1.25rem; }
+}
+
