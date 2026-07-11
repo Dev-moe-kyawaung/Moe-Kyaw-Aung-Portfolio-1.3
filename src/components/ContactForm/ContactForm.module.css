@@ -1,0 +1,104 @@
+.formWrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.input, .textarea {
+  background: var(--bg-void);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+  transition: border-color var(--dur-fast) var(--ease-smooth);
+  resize: vertical;
+}
+.input:focus, .textarea:focus {
+  border-color: var(--accent-green);
+  outline: none;
+}
+.inputError { border-color: var(--accent-red) !important; }
+
+.charCount {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  text-align: right;
+}
+
+.errorMsg {
+  font-size: 0.78rem;
+  color: var(--accent-red);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.errorMsg::before { content: '⚠'; }
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent-green);
+  color: #0a0a0a;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.95rem 1.5rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--dur-fast) var(--ease-smooth);
+  margin-top: 0.5rem;
+}
+.submitBtn:hover:not(:disabled) { background: var(--accent-green-dim); }
+.submitBtn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.spinner { animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.statusSuccess, .statusError {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.9rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+.statusSuccess {
+  background: rgba(0, 255, 156, 0.08);
+  border: 1px solid var(--accent-green);
+  color: var(--accent-green);
+}
+.statusError {
+  background: rgba(255, 95, 86, 0.08);
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+}
+
+@media (max-width: 600px) {
+  .formWrap { padding: 1.25rem; }
+  .fieldRow { grid-template-columns: 1fr; }
+}
+
