@@ -31,6 +31,43 @@ export default function Timeline() {
         </motion.div>
       ))}
     </div>
+    // src/components/ProjectGrid/Lightbox.jsx — additions to the existing useEffect
+
+import { useEffect, useCallback, useRef } from 'react';
+
+export default function Lightbox({ project, onClose }) {
+  const modalRef = useRef(null);
+  const previouslyFocused = useRef(null);
+
+  useEffect(() => {
+    // Store what had focus before opening, so we can restore it on close
+    previouslyFocused.current = document.activeElement;
+
+    // Move focus into the modal immediately (WCAG 2.4.3 Focus Order)
+    modalRef.current?.focus();
+
+    return () => {
+      // Restore focus to the trigger element on close (WCAG 2.4.3)
+      previouslyFocused.current?.focus();
+    };
+  }, []);
+
+  // ...existing handleKeyDown/Escape logic stays as-is...
+
+  return (
+    <div className={styles.backdrop} onClick={onClose} role="dialog" aria-modal="true">
+      <div
+        className={styles.modal}
+        onClick={(e) => e.stopPropagation()}
+        ref={modalRef}
+        tabIndex={-1}
+      >
+        {/* ...existing modal content... */}
+      </div>
+    </div>
+  );
+}
+  
   );
 }
 
