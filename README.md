@@ -94,3 +94,163 @@ Built entirely in **React** with a **terminal/hacker aesthetic** — monospace t
 
 ## 📂 Project Structure
 
+```
+moe-kyaw-aung-portfolio/
+├── public/
+│   ├── resume.pdf
+│   ├── sitemap.xml
+│   ├── robots.txt
+│   └── site.webmanifest
+├── src/
+│   ├── components/        # 20+ modular feature components
+│   │   ├── Navbar/  Hero/  About/  Skills/  ProjectGrid/
+│   │   ├── GitHubCollection/  Organizations/  LovableCollection/
+│   │   ├── EmailCollection/  Certificates/  SocialBar/
+│   │   ├── Testimonials/  ServiceTiers/  FAQ/  ContactForm/
+│   │   ├── MapEmbed/  Footer/  BackToTop/  StickyCTA/
+│   │   ├── Preloader/  CustomCursor/  ParallaxLayer/
+│   │   ├── LangSupport/  Blog/  LazyImage/  SEO/
+│   ├── data/               # Content data layer
+│   ├── context/             # Theme & language providers
+│   ├── hooks/                # Custom hooks
+│   ├── pages/                 # Route-level assemblies
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── vite.config.js
+├── package.json
+├── LICENSE
+├── CONTRIBUTING.md
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js `v18+`
+- npm `v9+`
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Dev-moe-kyawaung/moe-kyaw-aung-portfolio.git
+cd moe-kyaw-aung-portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Visit `http://localhost:5173` to view it locally.
+
+### Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_FORMSPREE_CONTACT_ID=your_contact_form_id
+VITE_FORMSPREE_NEWSLETTER_ID=your_newsletter_form_id
+```
+
+### Build for Production
+
+```bash
+npm run build      # outputs to /dist
+npm run preview    # preview the production build locally
+```
+
+---
+
+## 📦 Deployment
+
+<details>
+<summary><strong>▶ Deploy to Vercel (Recommended)</strong></summary>
+
+```bash
+npm install -g vercel
+vercel
+```
+Auto-detects Vite configuration and deploys in under a minute.
+</details>
+
+<details>
+<summary><strong>▶ Deploy to Netlify</strong></summary>
+
+```bash
+npm install -g netlify-cli
+netlify deploy --prod
+```
+- Build command: `npm run build`
+- Publish directory: `dist`
+</details>
+
+<details>
+<summary><strong>▶ Deploy to GitHub Pages</strong></summary>
+
+```bash
+npm install --save-dev gh-pages
+npm run build
+npm run deploy
+```
+Add `base: '/moe-kyaw-aung-portfolio/'` to `vite.config.js` if not using a custom domain.
+</details>
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Full MDX blog content for all posts
+- [ ] Expand Burmese translation coverage sitewide
+- [ ] Integrate real client testimonials
+- [ ] Add unit test coverage (Vitest + React Testing Library)
+- [ ] Convert anchor sections into fully routed pages for deeper SEO
+
+See [open issues](https://github.com/Dev-moe-kyawaung/moe-kyaw-aung-portfolio/issues) for the full list.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for guidelines.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+Distributed under the MIT License. See [`LICENSE`](./LICENSE) for full text.
+
+---
+
+## 📬 Contact & Connect
+
+<div align="center">
+
+**Moe Kyaw Aung** — Senior Android Developer
+
+[![GitHub](https://img.shields.io/badge/GitHub-Dev--moe--kyawaung-181717?style=for-the-badge&logo=github)](https://github.com/Dev-moe-kyawaung)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/moe-kyaw-aung-2653093a1)
+[![Gravatar](https://img.shields.io/badge/Gravatar-Profile-1E8CBE?style=for-the-badge&logo=gravatar&logoColor=white)](https://gravatar.com/moekyawaung13721)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:moekyawaung@engineer.com)
+
+📍 Tachileik, Myanmar 🇲🇲 &nbsp;↔&nbsp; Bangkok, Thailand 🇹🇭
+
+</div>
+
+---
+
+<div align="center">
+
+**⭐ If this project helped or inspired you, consider giving it a star! ⭐**
+
+</div>
