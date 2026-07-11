@@ -1,0 +1,24 @@
+.mapWrap {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.mapHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 1rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-soft);
+}
+.mapHeader svg { color: var(--accent-green); }
+
+.iframe {
+  display: block;
+  filter: grayscale(0.3) invert(0.92) contrast(0.9);
+}
+
