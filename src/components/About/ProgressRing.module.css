@@ -1,0 +1,49 @@
+.ringWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.progressArc {
+  transition: stroke-dashoffset 0.3s ease-out;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 156, 0.35));
+}
+
+.ringCenter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 2.2rem); /* excludes label height below svg */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.ringIcon {
+  font-size: 1.4rem;
+}
+
+.ringPercent {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.ringLabel {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .ringIcon { font-size: 1.1rem; }
+  .ringPercent { font-size: 0.95rem; }
+}
+
