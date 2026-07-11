@@ -1,0 +1,34 @@
+moe-kyaw-aung-portfolio-1.3/
+├── public/
+│   └── resume.pdf
+├── src/
+│   ├── main.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   ├── data/
+│   │   ├── projects.js
+│   │   ├── githubAccounts.js
+│   │   ├── lovableApps.js
+│   │   ├── certificates.js
+│   │   └── socials.js
+│   ├── context/
+│   │   ├── ThemeContext.jsx
+│   │   └── LangContext.jsx
+│   ├── hooks/
+│   │   ├── useScrollFade.js
+│   │   └── useCounter.js
+│   ├── components/
+│   │   ├── Navbar/
+│   │   ├── Hero/
+│   │   ├── About/
+│   │   ├── Skills/
+│   │   ├── ProjectGrid/
+│   │   ├── Certificates/
+│   │   ├── Footer/
+│   │   └── ...
+│   └── pages/
+│       ├── Home.jsx
+│       ├── Certificates.jsx
+│       ├── Projects.jsx
+│       └── Contact.jsx
+└── package.json
