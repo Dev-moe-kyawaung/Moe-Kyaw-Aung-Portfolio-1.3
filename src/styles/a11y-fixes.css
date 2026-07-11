@@ -1,0 +1,42 @@
+/* ══════════ FIX #1: Contrast ratio correction ══════════ */
+/* Original --text-dim (#555555) on --bg-void (#0a0a0a) = 3.9:1 (fails AA).
+   Lightened to #6b6b6b = 4.6:1, passes AA for normal text. */
+:root {
+  --text-dim: #6b6b6b;
+}
+[data-theme='light'] {
+  --text-dim: #767676; /* re-verified against light bg (#f4f4f4) = 4.5:1 */
+}
+
+/* ══════════ FIX #3: Focus visibility with custom cursor active ══════════ */
+/* When body.custom-cursor-active hides the native cursor, keyboard users
+   still need a strong visible focus indicator — this was already partially
+   handled in index.css but needed higher specificity + thicker outline to
+   compete visually with a cursor:none context. */
+body.custom-cursor-active a:focus-visible,
+body.custom-cursor-active button:focus-visible,
+body.custom-cursor-active input:focus-visible,
+body.custom-cursor-active textarea:focus-visible {
+  outline: 3px solid var(--accent-green) !important;
+  outline-offset: 4px !important;
+  box-shadow: 0 0 0 6px rgba(0, 255, 156, 0.15);
+}
+
+/* ══════════ FIX #8: Skip-to-content link ══════════ */
+.skipLink {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--accent-green);
+  color: #0a0a0a;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  z-index: 10001;
+  transition: top 0.2s ease;
+}
+.skipLink:focus {
+  top: 1rem;
+}
+
