@@ -1,0 +1,46 @@
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.iconLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  color: var(--text-primary);
+  transition: all var(--dur-fast) var(--ease-smooth);
+}
+.iconLink:hover {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+  box-shadow: var(--shadow-glow);
+}
+
+.compact .iconLink { width: 34px; height: 34px; }
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-void);
+  border: 1px solid var(--border-soft);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-fast) var(--ease-smooth);
+}
+.iconLink:hover .tooltip { opacity: 1; }
+
