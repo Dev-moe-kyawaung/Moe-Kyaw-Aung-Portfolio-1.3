@@ -1,0 +1,114 @@
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+/* Masonry via CSS multi-column — no JS layout engine required */
+.masonry {
+  column-count: 4;
+  column-gap: 1.25rem;
+}
+
+.card {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--dur-fast) var(--ease-smooth),
+              transform var(--dur-fast) var(--ease-smooth);
+}
+.card:hover {
+  border-color: var(--accent-green);
+  transform: translateY(-3px);
+}
+
+.imgWrap {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.imgWrap img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-smooth);
+}
+.imgWrap:hover img { transform: scale(1.06); }
+
+/* Height variance for masonry rhythm */
+.tall img { height: 320px; }
+.medium img { height: 220px; }
+.short img { height: 150px; }
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease-smooth);
+}
+.imgWrap:hover .imgOverlay { opacity: 1; }
+
+.tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--accent-green);
+  color: #0a0a0a;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+.cardBody { padding: 1.1rem 1.25rem 1.3rem; }
+.cardTitle {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cardDesc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+
+.techRow { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+.techPill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  background: var(--bg-void);
+  border: 1px solid var(--border-soft);
+  padding: 0.22rem 0.55rem;
+  border-radius: var(--radius-sm);
+  color: var(--accent-green);
+}
+
+.cardLinks { display: flex; gap: 1rem; }
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  transition: color var(--dur-fast) var(--ease-smooth);
+}
+.cardLink:hover { color: var(--accent-green); }
+
+/* Responsive column counts */
+@media (max-width: 1100px) { .masonry { column-count: 3; } }
+@media (max-width: 800px)  { .masonry { column-count: 2; } }
+@media (max-width: 520px)  { .masonry { column-count: 1; } }
+
