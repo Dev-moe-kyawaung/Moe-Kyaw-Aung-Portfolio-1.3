@@ -1,0 +1,179 @@
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+/* Primary featured card */
+.primaryCard {
+  display: block;
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-void));
+  border: 1px solid var(--accent-green);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-glow);
+  margin-bottom: 1.5rem;
+  transition: transform var(--dur-fast) var(--ease-smooth);
+}
+
+.primaryHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.primaryIcon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: var(--radius-md);
+  background: var(--bg-void);
+  border: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-green);
+}
+.primaryUsername {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+.primaryBio {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.primaryStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.statItem svg { color: var(--accent-green); }
+
+.pinnedRow { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.25rem; }
+.pinnedChip {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: var(--bg-void);
+  border: 1px solid var(--border-soft);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+
+.visitLink {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+/* Archive directory */
+.directory {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.directoryToggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+.directoryToggle:hover { color: var(--accent-green); }
+
+.countBadge {
+  background: var(--bg-void);
+  border: 1px solid var(--border-soft);
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-left: 6px;
+  color: var(--accent-amber);
+}
+
+.directoryBody {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--border-soft);
+}
+
+.directoryNote {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+.directoryNote strong { color: var(--text-muted); }
+
+.searchWrap {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dim);
+}
+.searchInput {
+  width: 100%;
+  background: var(--bg-void);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1rem 0.7rem 2.3rem;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+.searchInput:focus { border-color: var(--accent-green); outline: none; }
+
+.archiveGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.archiveChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: var(--bg-void);
+  border: 1px solid var(--border-soft);
+  padding: 0.45rem 0.8rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: all var(--dur-fast) var(--ease-smooth);
+}
+.archiveChip:hover { border-color: var(--accent-green); color: var(--accent-green); }
+
+.noResults { color: var(--text-dim); font-size: 0.85rem; padding: 1rem 0; }
+
+@media (max-width: 600px) {
+  .primaryCard { padding: 1.5rem; }
+  .primaryHeader { flex-direction: column; align-items: center; text-align: center; }
+  .primaryStats { justify-content: center; }
+}
+
