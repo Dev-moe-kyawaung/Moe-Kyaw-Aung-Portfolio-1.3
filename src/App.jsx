@@ -21,6 +21,15 @@ import Testimonials from './components/Testimonials/Testimonials.jsx';
 import ServiceTiers from './components/ServiceTiers/ServiceTiers.jsx';
 import FAQ from './components/FAQ/FAQ.jsx';
 import ContactSection from './pages/ContactSection.jsx';
+// Add as the very first element inside the top-level return in App.jsx,
+// before <Preloader />, so it's the first focusable element on the page:
+
+<a href="#main-content" className="skipLink">Skip to main content</a>
+
+// And add id="main-content" to the <main> wrapper:
+<main id="main-content">
+  {/* ...existing sections... */}
+</main>
 
 export default function App() {
   const [booted, setBooted] = useState(false);
