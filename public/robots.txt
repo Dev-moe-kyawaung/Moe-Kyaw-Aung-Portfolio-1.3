@@ -1,0 +1,8 @@
+# robots.txt — Moe Kyaw Aung Portfolio
+User-agent: *
+Allow: /
+Disallow: /blog/draft-*
+
+# Sitemap location
+Sitemap: https://moekyawaung.dev/sitemap.xml
+
