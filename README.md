@@ -95,7 +95,7 @@ Built entirely in **React** with a **terminal/hacker aesthetic** — monospace t
 ## 📂 Project Structure
 
 ```
-moe-kyaw-aung-portfolio/
+moe-kyaw-aung-portfolio-v1.3/
 ├── public/
 │   ├── resume.pdf
 │   ├── sitemap.xml
@@ -136,7 +136,7 @@ moe-kyaw-aung-portfolio/
 
 ```bash
 # Clone the repository
-git clone https://github.com/Dev-moe-kyawaung/moe-kyaw-aung-portfolio.git
+git clone https://github.com/Dev-moe-kyawaung/Moe-Kyaw-Aung-Portfolio-V1.3.git
 cd moe-kyaw-aung-portfolio
 
 # Install dependencies
@@ -197,7 +197,7 @@ npm install --save-dev gh-pages
 npm run build
 npm run deploy
 ```
-Add `base: '/moe-kyaw-aung-portfolio/'` to `vite.config.js` if not using a custom domain.
+Add `base: '/moe-kyaw-aung-portfolio-v1.3/'` to `vite.config.js` if not using a custom domain.
 </details>
 
 ---
@@ -210,7 +210,7 @@ Add `base: '/moe-kyaw-aung-portfolio/'` to `vite.config.js` if not using a custo
 - [ ] Add unit test coverage (Vitest + React Testing Library)
 - [ ] Convert anchor sections into fully routed pages for deeper SEO
 
-See [open issues](https://github.com/Dev-moe-kyawaung/moe-kyaw-aung-portfolio/issues) for the full list.
+See [open issues](https://github.com/Dev-moe-kyawaung/moe-kyaw-aung-portfolio-v1.3/issues) for the full list.
 
 ---
 
