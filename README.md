@@ -137,7 +137,7 @@ moe-kyaw-aung-portfolio-1.3/
 ```bash
 # Clone the repository
 git clone https://github.com/Dev-moe-kyawaung/Moe-Kyaw-Aung-Portfolio-1.3.git
-cd moe-kyaw-aung-portfolio
+cd moe-kyaw-aung-portfolio-1.3
 
 # Install dependencies
 npm install
